@@ -15,9 +15,7 @@ const Main = styled.main`
 
 const App = () => (
     <Main>
-      <header className="App-header">
-        <p>Test</p>
-      </header>
+      <Navigation />
     </Main>
 );
 
