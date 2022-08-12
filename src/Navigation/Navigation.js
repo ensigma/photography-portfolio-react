@@ -1,6 +1,6 @@
 // Libraries
 
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 // Dependencies 
 
@@ -18,18 +18,36 @@ const NavLinkLogoWrapper = styled.div`
 const NavLinkWrapper = styled.div`
     display: flex;
     flex-basis: 40%;
+    justify-content: space-between;
+`;
+
+const NavLink = styled.a`
+    font-family: 'Inter';
+    ${props => props.linkType === 'logo' && css`
+        font-weight: 700;
+    `}
+    ${props => props.linkType === 'normal' && css`
+        font-weight: 500;
+    `}
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
 `;
 
 const Navigation = () => (
     <Wrapper>
         <NavLinkLogoWrapper className="nav-link-logo-wrapper">
-            <NavLink type="logo">Logo</NavLink>
+            <NavLink href="#" linkType="logo" title="Logo">logo</NavLink>
         </NavLinkLogoWrapper>
         <NavLinkWrapper className="nav-link-wrapper">
-            <NavLink type="link">Home</NavLink>
-            <NavLink type="link">Portfolio</NavLink>
-            <NavLink type="link">About</NavLink>
-            <NavLink type="link">Contact</NavLink>
+            <NavLink href="#" linkType="normal" title="Home">home</NavLink>
+            <NavLink href="#" linkType="normal" title="Portfolio">portfolio</NavLink>
+            <NavLink href="#" linkType="normal" title="About">about</NavLink>
+            <NavLink href="#" linkType="normal" title="Contact">contact</NavLink>
         </NavLinkWrapper>
     </Wrapper>
 )
+
+export default Navigation;
