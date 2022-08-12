@@ -22,10 +22,10 @@ const NavLinkWrapper = styled.div`
 
 const Navigation = () => (
     <Wrapper>
-        <NavLinkLogoWrapper>
+        <NavLinkLogoWrapper className="nav-link-logo-wrapper">
             <NavLink type="logo">Logo</NavLink>
         </NavLinkLogoWrapper>
-        <NavLinkWrapper>
+        <NavLinkWrapper className="nav-link-wrapper">
             <NavLink type="link">Home</NavLink>
             <NavLink type="link">Portfolio</NavLink>
             <NavLink type="link">About</NavLink>
