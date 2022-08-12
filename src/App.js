@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+// Libraries
 
-function App() {
-  return (
-    <div className="App">
+import styled from 'styled-components';
+
+// Dependencies 
+
+import Navigation from './Navigation/Navigation';
+
+// Styled Components
+
+const Main = styled.main`
+  background: #000;
+  margin: 5rem 6.875rem 4.75rem;
+`;
+
+const App = () => (
+    <Main>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p>Test</p>
       </header>
-    </div>
-  );
-}
+    </Main>
+);
 
 export default App;
