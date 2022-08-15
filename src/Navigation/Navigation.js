@@ -8,6 +8,7 @@ import styled, { css } from 'styled-components';
 const Wrapper = styled.nav`
     display: flex;
     flex-basis: 100%;
+    padding-bottom: 6.625rem;
 `;
 
 const NavLinkLogoWrapper = styled.div`
