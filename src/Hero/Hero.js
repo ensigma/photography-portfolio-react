@@ -4,23 +4,26 @@ import styled from 'styled-components';
 
 // Dependencies 
 
+import Button from '../components/Button';
+
 // Styled Components
 
 const HeroWrapper = styled.section`
     padding: 2.375rem 0;
-    max-height: 54.0625rem;
     justify-content: center;
     display: flex;
     flex-direction: column;
 `;
 
 const AltText = styled.p`
-    font-size: 1.5rem;
-    line-height: 1.81rem;
+    font-size: 1rem;
+    line-height: 1.21rem;
     font-weight: 500;
     font-family: 'Inter';
     color: white;
     display: flex;
+    margin: 0;
+    width: 52%;
 `;
 
 
@@ -33,22 +36,22 @@ const HeroText = styled.h1`
     line-height: 9.8rem;
     text-align: center;
     margin: 0;
-    position: absolute;
+    position: relative;
     z-index: 1;
     display: flex;
-    justify-content: center;
 `;
 
 const LeftHeroImg = styled.div`
-    height: 535px;
-    width: 529px;
+    height: 358.45px;
+    width: 354.43px;
     overflow: visible;
+    position: absolute;
     &:before {
         content: " ";
         position: absolute;
         background-image: url("../imgs/hero_left.jpg");
-        height: 535px;
-        width: 528px;
+        height: 358.45px;
+        width: 354.43px;
         background-position: center;
         margin-left: -6.875rem;
     }
@@ -56,8 +59,9 @@ const LeftHeroImg = styled.div`
 
 const Hero = () => (
     <HeroWrapper>
-        <AltText>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</AltText>
+        <AltText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit</AltText>
         <HeroText>Creative Design</HeroText>
+        <Button content="Get a Quote" justifyContent="flex-end" />
         <LeftHeroImg alt="Left Hero Portfolio Image" />
     </HeroWrapper>
 );
